@@ -1,0 +1,116 @@
+/* RESET NHẸ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* BACKGROUND TƯƠI TẮN */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4 40%, #fbc2eb 70%, #a1c4fd);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+/* KHUNG CHÍNH */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background: #ffffffee;
+    padding: 22px 26px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(4px);
+}
+
+/* TIÊU ĐỀ */
+h1 {
+    font-size: 24px;
+    margin-bottom: 6px;
+    background: linear-gradient(90deg, #ff6f91, #ff9671, #ffc75f);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 800;
+}
+
+p {
+    margin-top: 2px;
+    margin-bottom: 16px;
+    color: #555;
+}
+
+/* BẢNG DỮ LIỆU NĂNG ĐỘNG */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* HEADER BẢNG */
+.data-table thead th {
+    padding: 10px 8px;
+    text-align: left;
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient(90deg, #845EC2, #FF6F91, #FF9671);
+    border-bottom: 2px solid #ffb085;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Ô DỮ LIỆU */
+.data-table td {
+    padding: 8px 8px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    background: #ffffff;
+}
+
+/* ZEBRA ROW */
+.data-table tbody tr:nth-child(even) td {
+    background: #fff8f0;
+}
+
+/* HOVER HÀNG */
+.data-table tbody tr:hover td {
+    background: #fff0f6;
+    transition: background 0.2s ease-in-out;
+}
+
+/* HOVER Ô EMAIL / USERNAME LÀM NỔI HƠN */
+.data-table tbody td:nth-child(1),
+.data-table tbody td:nth-child(6) {
+    font-weight: 600;
+    color: #ff6f91;
+}
+
+/* ĐOẠN “Không có dữ liệu” */
+.data-table td[colspan] {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+}
+
+/* RESPONSIVE NHẸ TRÊN MÀN NHỎ */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px 14px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .data-table {
+        font-size: 12px;
+    }
+    .data-table thead th,
+    .data-table td {
+        padding: 6px;
+    }
+}
