@@ -1,0 +1,314 @@
+/* ========== RESET NHẸ ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== NỀN & BỐ CỤC CHUNG ========== */
+body {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #e0f7ff 0, #f9fbff 45%, #fef6f6 100%);
+    min-height: 100vh;
+    padding: 24px 12px;
+    color: #0f172a;
+}
+
+/* Căn giữa toàn bộ layout */
+header,
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+/* ========== THANH HEADER HIỆN ĐẠI ========== */
+header {
+    padding: 14px 18px;
+    background: rgba(15, 23, 42, 0.96);
+    color: #e5e7eb;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    box-shadow: 0 18px 35px rgba(15, 23, 42, 0.35);
+    backdrop-filter: blur(12px);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Nút chuyển role dạng toggle hiện đại */
+.role-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.role-switch span {
+    opacity: 0.8;
+}
+
+.role-switch-inner {
+    display: inline-flex;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.25);
+    padding: 2px;
+}
+
+.role-switch a {
+    text-decoration: none;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 999px;
+    color: #e5e7eb;
+    transition: background 0.15s ease, color 0.15s ease, transform 0.08s ease;
+}
+
+.role-switch a.active {
+    background: #22c55e;
+    color: #0f172a;
+    transform: translateY(-1px);
+}
+
+.role-switch a:not(.active):hover {
+    background: rgba(15, 23, 42, 0.7);
+}
+
+/* ========== KHUNG NỘI DUNG CHÍNH ========== */
+.container {
+    margin-top: 16px;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 20px 22px;
+    border-radius: 18px;
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.container h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* ========== VIEW GUEST – CARD HOA HIỆN ĐẠI ========== */
+.flower-article {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    margin-bottom: 16px;
+    padding: 12px 12px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    background: linear-gradient(135deg, #f9fafb, #ffffff);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.flower-article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+    border-color: #bfdbfe;
+}
+
+.flower-article img {
+    width: 220px;
+    min-width: 220px;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.flower-article h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    color: #16a34a;
+    font-weight: 700;
+}
+
+.flower-article p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #4b5563;
+    text-align: justify;
+}
+
+/* ========== FORM THÊM HOA (ADMIN) ========== */
+.add-form {
+    margin-top: 8px;
+    margin-bottom: 14px;
+    padding: 14px 14px;
+    background: #f9fafb;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    display: grid;
+    gap: 8px;
+}
+
+.add-form label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.add-form input[type="text"],
+.add-form textarea {
+    width: 100%;
+    padding: 7px 9px;
+    margin-top: 3px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+    background: #ffffff;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.add-form input[type="text"]:focus,
+.add-form textarea:focus {
+    border-color: #22c55e;
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.15);
+    background: #f9fffb;
+}
+
+.add-form textarea {
+    min-height: 72px;
+}
+
+/* ========== BUTTONS HIỆN ĐẠI ========== */
+.btn-add,
+.btn-edit,
+.btn-delete {
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.12s ease, background 0.12s ease;
+}
+
+.btn-add {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #f9fafb;
+    box-shadow: 0 6px 14px rgba(22, 163, 74, 0.35);
+}
+
+.btn-edit {
+    background: linear-gradient(135deg, #fb923c, #f97316);
+    color: #fff;
+}
+
+.btn-delete {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: #fff;
+}
+
+.btn-add:hover,
+.btn-edit:hover,
+.btn-delete:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.25);
+    opacity: 0.96;
+}
+
+.btn-add:active,
+.btn-edit:active,
+.btn-delete:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.3);
+}
+
+/* ========== BẢNG ADMIN HIỆN ĐẠI ========== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+    font-size: 14px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+thead {
+    background: linear-gradient(90deg, #eff6ff, #e0f2fe);
+}
+
+th,
+td {
+    padding: 8px 10px;
+    text-align: left;
+}
+
+th {
+    font-weight: 600;
+    color: #1f2937;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+tbody tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+tbody tr:hover {
+    background: #eff6ff;
+}
+
+td img {
+    width: 110px;
+    height: 78px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+.actions a {
+    text-decoration: none;
+}
+
+/* Tên file ảnh */
+.note {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    body {
+        padding: 16px 8px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .flower-article {
+        flex-direction: column;
+    }
+
+    .flower-article img {
+        width: 100%;
+        min-width: 0;
+        height: 190px;
+    }
+}
